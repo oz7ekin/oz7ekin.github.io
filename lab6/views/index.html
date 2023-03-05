@@ -11,7 +11,7 @@
   <style>
     .myDiv {
       border: 5px outset rgb(15, 14, 14);
-      background-color: rgb(129, 129, 129);
+      background-color: rgb(173, 173, 173);
       text-align: center;
     }
     body {
@@ -21,6 +21,34 @@
         background-size: cover;
         opacity: 0.8; 
     }
+    .inverted {
+        background-color: rgb(177, 177, 177);
+        color: rgb(0, 0, 0);
+        padding: 20px;
+        text-align: left;
+      }
+
+      .myDiv input[type="checkbox"] {
+        transform: scale(1.2);
+      }
+      .myDiv label {
+        font-weight: bold;
+        font-size: 1.5em;
+      }
+
+      .myDiv input[type="radio"] {
+        font-size: 16px;
+      }
+      
+      .myDiv label {
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+
+
+
+
 </style>
 
 </head>
@@ -33,25 +61,25 @@
     <form name="UI Form">
       <div class="myDiv">
         <h3>Please enter your name and name of the program you are in</h3>
-        Your Name&Program: <input type="text" name="program" required><br>
+        Your Name&Program: <input type="text" name="program" required placeholder="Name & Program"><br>
         <br>
       </div>
 
       <div class="myDiv">
         <h3>Would you study at Uottawa.ca again?</h3>
-        <input type="radio" name="yn" value="Yes">Yes<br>
-        <input type="radio" name="yn" value="No">No<br>
+        <input type="radio" name="yn" value="Yes">&nbsp&nbspYes<br>
+        <input type="radio" name="yn" value="No">&nbsp&nbspNo<br>
         <br>
       </div>
 
       <div class="myDiv">
-        <h3>Please check every characteristic that you like about uottawa.ca</h3>
-        <input type="checkbox" name="characteristic" value="Proper-Functionality">Proper Functionality<br>
-        <input type="checkbox" name="characteristic" value="Consistency">Consistency<br>
-        <input type="checkbox" name="characteristic" value="Efficiency">Efficiency<br>
-        <input type="checkbox" name="characteristic" value="Usability">Usability<br>
-        <input type="checkbox" name="characteristic" value="Reliability">Reliability<br>
-        <input type="checkbox" name="characteristic" value="Security">Security<br>
+        <h3>Characteristic(s) that you like about uottawa.ca</h3>
+        <input type="checkbox" name="characteristic" value="Proper-Functionality">&nbsp&nbsp&nbspFunctionality<br>
+        <input type="checkbox" name="characteristic" value="Consistency">&nbsp&nbsp&nbsp&nbspConsistency<br>
+        <input type="checkbox" name="characteristic" value="Efficiency">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspEfficiency<br>
+        <input type="checkbox" name="characteristic" value="Usability">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspUsability<br>
+        <input type="checkbox" name="characteristic" value="Reliability">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspReliability<br>
+        <input type="checkbox" name="characteristic" value="Security">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSecurity<br>
         <br>
       </div>
 
@@ -68,17 +96,17 @@
 
       <div class="myDiv">
         <h3>The uOttawa website is easy to navigate</h3>
-        Strongly Disagree<input type="radio" name="likert" value="Strongly Disagree">
+        &nbsp&nbspStrongly Disagree&nbsp&nbsp<input type="radio" name="likert" value="Strongly Disagree">
         <input type="radio" name="likert" value="Disagree">
         <input type="radio" name="likert" value="Neutral">
         <input type="radio" name="likert" value="Agree">
-        <input type="radio" name="likert" value="Strongly Agree">Strongly Agree<br>
+        <input type="radio" name="likert" value="Strongly Agree">&nbsp&nbspStrongly Agree<br>
         <br>
       </div>
 
       <div class="myDiv">
         <h3>Do you have any ideas to help improve the design of the webpage?</H3>
-        <textarea name="comment" white-space="pre-wrap" rows="5" cols="30"/></textarea><br>
+        <textarea name="comment" white-space="pre-wrap" rows="5" cols="50" placeholder="Please enter max 250 letters"/></textarea><br>
         <br>
       </div>
 
@@ -89,7 +117,7 @@
         <button type="submit" class="btn btn-warning" id="bb">Submit</button>
       </div>
     </form>
-    <footer>   
+    <footer class="inverted">   
       Website designed by <a href="https://github.com/oz7ekin/oz7ekin.github.io"> SEG 3125 Group 6</a>.
     </footer>
     <script src="/assets/action.js"></script>
